@@ -1,0 +1,59 @@
+.cy-navbar {
+    height: 50px !important;
+    line-height: 50px !important;
+}
+
+.el-menu-demo {
+    border-bottom:0 !important;
+}
+
+.el-menu-item {
+    height: 50px !important;
+    line-height: 46px !important;
+    margin-bottom:0 !important;
+}
+
+.el-icon-user  {
+    margin-right: 0 !important;
+}
+
+.el-tag {
+    height: 22px !important;
+    width: 46px !important;
+    line-height: 22px;
+}
+.logo-setting {
+    margin-right: 9rem !important;
+    margin-bottom: 0 !important;
+}
+
+.noBackground:hover  {
+    background: rgb(50, 65, 72) !important;
+}
+.icon-cancelPadding {
+    padding: 0 !important;
+}
+.icon-setPadding {
+    padding: 0 14px 0 14px !important
+}
+.icon-color {
+    color: #fff !important;
+}
+.icon-size {
+    display: inline-block;
+    width:100%;
+}
+
+.navbar-iconSize {
+    height: 46px;
+    width: 46px;
+    line-height: 46px;
+}
+
+.popper-width {
+    padding: 0 20px 0 20px;
+    margin:0 !important;
+}
+.more-info {
+    margin-bottom: -10px;
+}

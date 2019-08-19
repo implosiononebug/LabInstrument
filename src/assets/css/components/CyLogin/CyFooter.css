@@ -1,0 +1,27 @@
+
+.CyFooter {
+    border-top: 1px solid #999;
+    padding: 0 20px 0 20px;
+    line-height: 50px !important;
+}
+
+.logo-setting:hover  {
+    background:#fff !important;
+}
+
+.icon-setting:hover {
+    background: #eee !important;
+}
+
+.icon-footer-box {
+    margin-top:1px;
+}
+
+.el-icon-help {
+    margin: 0;       
+}
+
+.support-text {
+    margin-left: 1rem;
+    font-size:13px !important;
+}

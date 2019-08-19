@@ -1,0 +1,28 @@
+.cy-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+}
+
+.cy-wrapper-breadcrumb {
+    padding: 1rem 1rem 1rem 1rem;
+    background:#fafafa;
+    
+}
+
+.icon-comment-discussion, .icon-gear {
+    color:#333 !important;
+}
+
+.cy-wrapper-content {
+    padding: 1.25rem 1rem;
+}
+
+.wrapper-setting {
+    cursor: pointer;
+}
+
+.text-muted {
+    font-size: 12px ;
+}

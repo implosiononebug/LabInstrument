@@ -1,0 +1,77 @@
+.cy-sidebar {
+    height: 100%;
+   
+}
+.el-menu-vertical-demo {
+    overflow: hidden;
+    text-align: left;
+    height:100%;
+    
+}
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 270px;
+    min-height: 400px;
+    height: 100%;
+}
+
+.sidebar-user-box {
+    line-height:normal;
+    padding: 10px 0 0 0 !important;
+}
+
+.sidebar-icon-size {
+    width:24px !important;
+    height:18px;
+}
+
+.sidebar-user-link {
+    margin-left: .8rem;
+}
+
+.sidebar-user-info {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.sidebar-user-name {
+    color: #fff;
+}
+
+.sidebar-circle-round {
+    width: 38px;
+    height: 38px;
+    margin-bottom: .4rem;
+    border-radius: 50%!important;
+}
+
+.noBackground:hover  {
+    background: rgb(38, 50, 56) !important;
+    cursor: default;
+}
+
+
+.icon-cog3 {
+    color:#fff;
+    margin-left:2.5rem;
+}
+
+
+.streth-sidebar {
+    position: absolute;
+    top: 0;
+    left: 13.9rem;
+    color: #fff;
+    height: 50px;
+    width: 46px;
+    line-height: 49.9px;
+    color: rgb(255, 255, 255);
+    border-bottom-color: transparent;
+    background-color: rgb(50, 65, 72);
+    transition: background-color .3s;
+}
+
+.streth-sidebar:hover {
+    background-color: rgb(40, 52, 58);
+    cursor: pointer;
+}
