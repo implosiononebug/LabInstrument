@@ -26,7 +26,7 @@ import CySidebar from '../../components/CyHome/CySidebar'
 import CyWrapper from '../../components/CyHome/CyWrapper'
 export default {
   name: 'CyHome',
-  components: {
+  components: { 
     CyNavbar,
     CySidebar,
     CyWrapper

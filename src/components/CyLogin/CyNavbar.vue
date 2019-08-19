@@ -26,14 +26,14 @@
                 </el-dropdown-menu>
             </el-dropdown>
         </el-menu-item>
-        <el-menu-item class="noBackground">
-            <el-tag effect="dark" type="info">离线</el-tag>
+        <el-menu-item class="noBackground ">
+            <el-tag class="loginTag" effect="dark" type="info">离线</el-tag>
         </el-menu-item>
-        <el-menu-item class="float-right icon-cancelPadding mr-3">
+        <el-menu-item class="float-right icon-cancelPadding mr-3 navbar-user-box">
             <el-dropdown>
-                <div class="el-dropdown-link">
-                    <el-avatar class="ml-2" :size="34" ></el-avatar>
-                    <span class="icon-color ml-2">未登录</span>
+                <div class="el-dropdown-link ">
+                    <el-avatar class="ml-3" :size="34" ></el-avatar>
+                    <span class="icon-color ml-3 navbar-user-name">未登录</span>
                     <i class="icon-arrow-down22 pr-2 ml-2 icon-color"></i>
                 </div>
                 <el-dropdown-menu slot="dropdown">

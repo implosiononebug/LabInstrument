@@ -17,14 +17,25 @@
     margin-right: 0 !important;
 }
 
-.el-tag {
+.loginTag {
     height: 22px !important;
     width: 46px !important;
     line-height: 22px;
+    border-radius: 1px;
 }
 .logo-setting {
-    margin-right: 9rem !important;
+    margin-right: 13.4rem !important;
     margin-bottom: 0 !important;
+}
+
+.navbar-user-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-user-name {
+    font-size:13px;
 }
 
 .noBackground:hover  {

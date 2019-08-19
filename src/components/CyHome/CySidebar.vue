@@ -6,12 +6,13 @@
         <el-menu  
             class="el-menu-vertical-demo" 
             background-color="#263238"
-            text-color="#FFFFFF"
-            active-text-color="#ffd04b"
+            text-color="#f1f1f1"
+            active-text-color="#FFFFFF"
             :router="true"
+            :default-active="activeIndex"
             @open="handleOpen" @close="handleClose" :collapse="isCollapse">
             <el-menu-item class="sidebar-user-box noBackground">
-                <a class="sidebar-user-link" href="#">
+                <a  href="#">
                     <img class="sidebar-circle-round" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png">
                 </a>
                 <div class="sidebar-user-info">
@@ -74,14 +75,15 @@
     </div>
 </template>
 
-<style scoped src="../../assets/css/components/CyHome/CySidebar.css"></style>
+<style src="../../assets/css/components/CyHome/CySidebar.css"></style>
 
 <script>
 export default {
     name: 'CySidebar',
     data() {
         return {
-            isCollapse: false
+            isCollapse: false,
+            activeIndex: "1"
         }
     },
     methods:{
