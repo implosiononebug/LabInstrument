@@ -33,11 +33,12 @@
                     <span slot="title">资源管理</span>
                 </template>
                 <el-menu-item-group>
-                    <el-menu-item index="2-1">仪器</el-menu-item>
-                    <el-submenu index="2-2">
-                        <template slot="title">仪器类型</template>
-                        <el-menu-item index="1-4-1">仪器详情</el-menu-item>
+                    
+                    <el-submenu index="2-1">
+                        <template slot="title">仪器</template>
+                        <el-menu-item index="2-1-1">仪器详情</el-menu-item>
                     </el-submenu>
+                    <el-menu-item index="2-2">仪器类型</el-menu-item>
                     <el-menu-item index="2-3">机构</el-menu-item>
                     <el-menu-item index="2-4">用户</el-menu-item>
                 </el-menu-item-group>
