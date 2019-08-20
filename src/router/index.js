@@ -3,8 +3,6 @@ import Router from 'vue-router'
 
 import CyHome from '../views/CyHome/CyHome.vue'
 import CyHomeIndex from '../views/CyHome/CyHomeSubView/CyHomeIndex.vue'
-import CyResourceSystem from '../components/CyHome/CyResourceManage/CyResourceSystem.vue'
-import CyResourceFunction from '../components/CyHome/CyResourceManage/CyResourceFunction.vue'
 
 
 
@@ -28,16 +26,6 @@ export default new Router({
           path:'/home/index',
           name:'CyHomeIndex',
           component: CyHomeIndex
-        },
-        {
-          path:'/resource/system',
-          name:'CyResourceSystem',
-          component:CyResourceSystem
-        },
-        {
-          path:'/resource/function',
-          name: 'CyResourceFunction',
-          component: CyResourceFunction
         }
       ]
     }
