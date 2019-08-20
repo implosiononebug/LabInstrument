@@ -179,6 +179,7 @@
 .elem-primary:hover {
     color: #0a6ebd !important;
     text-decoration: none;
+    border-color:  #0a6ebd !important;
 }
 
 .button-primary {
