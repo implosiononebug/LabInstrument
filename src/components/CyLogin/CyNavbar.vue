@@ -17,12 +17,71 @@
                     <i class="icon-git-compare navbar-iconSize icon-color"></i>
                 </div>
                 <el-dropdown-menu slot="dropdown">
-                    <el-main>
-                        <el-row :gutter="20">
-                            <el-col :span="6">11111111111111</el-col>
-                            <el-col :span="6" :offset="6">11111111111111</el-col>
-                        </el-row>
-                    </el-main>
+                    <div class="media popper-width border-bottom">
+                        <p class="font-weight font-size-sm">更新</p>
+                        <a href="#">
+                            <i class="icon-sync text-muted"></i>
+                        </a>
+                    </div>
+                    <div class="popper-width dropdown-scrollable">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="mr-3">
+                                    <el-avatar class="icon-git-style" icon="icon-git-pull-request"></el-avatar>
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <span class="update-fontsize">Drop the IE specific hacks for temporal inputs</span>
+                                    </div>
+                                    <span class="text-muted">
+                                        4 minutes ago
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <div class="mr-3">
+                                    <el-avatar class="icon-git-commit-style" icon="icon-git-commit"></el-avatar>
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <span class="update-fontsize">Add full font overrides for popovers and tooltips</span>
+                                    </div>
+                                    <span class="text-muted">
+                                        36 minutes ago
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <div class="mr-3">
+                                    <el-avatar class="icon-git-merge-style" icon="icon-git-merge"></el-avatar>
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <span class="update-fontsize">Eugene Kopyov merged Master and Dev branches</span>
+                                    </div>
+                                    <span class="text-muted">
+                                        Dec 18, 18:36
+                                    </span>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="popper-width pt-2 pb-2 border-top">
+                        <el-link class="text-muted" type="info" :underline="false">所有更新</el-link>
+                        <div class="updated-icon-group">
+                            <el-tooltip  class="item cancelPadding" effect="dark" content="Mark all as read" placement="top">
+                                <el-dropdown-item class="more-info">
+                                    <i class="icon-radio-unchecked "></i>
+                                </el-dropdown-item>
+                            </el-tooltip>
+                            <el-tooltip  class="item cancelPadding" effect="dark" content="bug Tracker" placement="top">
+                                <el-dropdown-item class="more-info">
+                                    <i class="icon-bug2 "></i>
+                                </el-dropdown-item>
+                            </el-tooltip>
+                        </div>
+                    </div>
                 </el-dropdown-menu>
             </el-dropdown>
         </el-menu-item>
@@ -65,6 +124,9 @@
                 <el-dropdown-menu slot="dropdown">
                     <div class="media popper-width border-bottom">
                         <p class="font-weight font-size-sm">消息通知</p>
+                        <a href="#">
+                            <i class="icon-compose text-muted"></i>
+                        </a>
                     </div>
                     <div class="popper-width dropdown-scrollable">
                         <ul class="media-list">
@@ -87,8 +149,8 @@
                             
                         </ul>
                     </div>
-                    <el-tooltip class="item border-top more-info" effect="dark" content="查看更多信息" placement="top">
-                        <el-dropdown-item class="text-center">
+                    <el-tooltip  class="item pb-1 border-top" effect="dark" content="查看更多信息" placement="top">
+                        <el-dropdown-item class="text-center more-info">
                             <i class="el-icon-more"></i>
                         </el-dropdown-item>
                     </el-tooltip>
@@ -103,6 +165,9 @@
                 <el-dropdown-menu slot="dropdown">
                     <div class="media popper-width border-bottom">
                         <p class="font-weight font-size-sm">在线用户</p>
+                        <a href="#">
+                            <i class="icon-search4 font-size-base text-muted"></i>
+                        </a>
                     </div>
                     <div class="popper-width dropdown-scrollable">
                         <ul class="media-list">
@@ -144,11 +209,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="popper-width pt-3 border-top more-info clearfix">
-                        <el-link class="text-muted" :underline="false">所有用户</el-link>
-                        <el-link class="text-muted float-right" :underline="false">
-                            <i class="el-icon-setting"></i>
-                        </el-link>
+                    <div class="popper-width pt-2 pb-2 border-top">
+                        <el-link class="text-muted" type="info" :underline="false">所有用户</el-link>
+                        <a href="#">
+                            <i class="el-icon-setting text-muted"></i>
+                        </a>
                     </div>
                 </el-dropdown-menu>
             </el-dropdown>

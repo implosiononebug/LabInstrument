@@ -64,7 +64,45 @@
 .popper-width {
     padding: 0 20px 0 20px;
     margin:0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.more-info {
-    margin-bottom: -10px;
+.more-info:hover {
+    background: #fff;
+}
+
+.updated-icon-group {
+    display: flex;
+    float: right;
+}
+
+.icon-git-style, .icon-git-commit-style, .icon-git-merge-style {
+    background: #fff;
+    border: 2px solid;
+    border-radius: 50%;
+    line-height: 32px;
+}
+
+.icon-git-style {
+    color: blue;
+    border-color: blue;
+}
+
+.icon-git-commit-style {
+    color: red;
+    border-color: red;
+}
+
+.icon-git-merge-style {
+    color: green;
+    border-color: green
+}
+
+.update-fontsize {
+    font-size:13px;
+}
+
+.media {
+    margin-bottom: 20px;
 }

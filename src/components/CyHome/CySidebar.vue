@@ -16,7 +16,7 @@
                     <img class="sidebar-circle-round" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png">
                 </a>
                 <div class="sidebar-user-info">
-                    <p class="cancelMargin cancelPadding ml-2 sidebar-user-name">未登录</p>
+                    <p class="cancelMargin cancelPadding ml-2 sidebar-user-name">{{username}}</p>
                     <p class="cancelMargin text-muted sidebar-user-location"><i class="icon-pin font-size-sm"></i>安徽省 合肥市 蜀山区</p>
                 </div>
                 <a href="#" class="icon-color">
@@ -115,12 +115,17 @@
 <style src="../../assets/css/components/CyHome/CySidebar.css"></style>
 
 <script>
+import store from 'store'
+import axios from 'axios'
+
 export default {
     name: 'CySidebar',
     data() {
         return {
             isCollapse: false,
-            activeIndex: "1"
+            activeIndex: "1",
+            username:'',
+            menu: {}
         }
     },
     methods:{
@@ -133,6 +138,17 @@ export default {
         strethSidebar() {
             this.isCollapse = !this.isCollapse;
         }
+    },
+    mounted() {
+        let name = store.get('username');
+        this.username = name;
+        axios.get('https://easy-mock.com/mock/5be8e391aebfd849286cd72c/labInstrument/getMenu').then((res) => {
+          console.log(res.data.data);
+            this.menu = res.data.data.menu;
+            console.log(this.menu);
+       }).catch( (error) => {
+            console.log(error);
+        });
     }
 }
 </script>

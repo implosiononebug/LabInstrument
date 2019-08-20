@@ -1,7 +1,7 @@
 <template>
     <div class="cy-content justify-center align-center">
-        <el-card class="box-card cy-content-image" shadow="never">
-          <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+        <el-card class="box-card cy-content-image-group" shadow="never">
+          <img class="cy-content-image" src="https://www.agilent.com/cs/publishingimages/forensics-pharmaceuticals-subgroup-2.jpg">
         </el-card>
         <el-card class="box-card" shadow="never">
           <el-tabs class="login-gruop" v-model="activeName" type="card" @tab-click="handleClick">
@@ -13,13 +13,13 @@
                 <span class="text-muted">在下方输入您的账户和密码</span>
               </div>
               <el-row class="input-group">
-                <input class="input-control" type="text" placeholder="用户名">
+                <input v-model="form.username" class="input-control" type="text" placeholder="用户名">
                 <div class="input-icon-container" >
                   <i class="input-icon icon-user text-muted"></i>
                 </div>
               </el-row>
               <el-row class="input-group">
-                <input class="input-control" type="password" placeholder="密码">
+                <input v-model="form.userpsd" class="input-control" type="password" placeholder="密码">
                 <div class="input-icon-container">
                   <i class="input-icon icon-lock2 text-muted"></i>
                 </div>
@@ -92,20 +92,44 @@ export default {
     name: 'CyContent',
     data() {
       return {
-        activeName: 'first'
+        activeName: 'first',
+        form: {
+          username:'',
+          userpsd: ''
+        }
       }
     },
     methods: {
       handleClickGetToken() {
-        var  a = 1
-        var b = 2
-        instance.get('/mock/token.json', {
-
-        }).then(res => {
-            store.set("token", '213123123')
-        })
-
-        var c = 4
+        if(this.form.username == '' || this.form.userpsd =='') {
+            this.$notify.error({
+              title: '错误',
+              message: '请输入账号或密码'
+            });
+            this.form = {
+              username: '',
+              userpsd: ''
+            }
+        } else if(this.form.username != 'admin' || this.form.userpsd != '123456') {
+            this.$notify.error({
+              title: '错误',
+              message: '账号或密码错误，请重新输入'
+            });
+            this.form = {
+              username: '',
+              userpsd: ''
+            }
+        } else if(this.form.username == 'admin' && this.form.userpsd == '123456') {
+            instance.get('/mock/token.json', {
+            }).then(res => {
+                store.set("token", res.data.token);
+                store.set("username", this.form.username);
+                store.set('userpsd',this.form.userpsd);
+                let flag = true;
+                this.$store.commit('login',flag);
+                this.$router.push('/home/index');
+          })
+        } 
       },
       handleClick(tab, event) {
         console.log(tab, event);

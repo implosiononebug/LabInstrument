@@ -15,29 +15,33 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path:'/',
+      path:'/login',
       name: 'CyLogin',
-      component: CyLogin
+      component: CyLogin,
     },
     {
       path:'/home',
       name: 'CyHome',
       component: CyHome,
+      meta: { requireAuth: true },
       children: [
         {
           path:'/home/index',
           name:'CyHomeIndex',
-          component: CyHomeIndex
+          component: CyHomeIndex,
+          meta: { requireAuth: true },
         },
         {
           path: '/resource/type',
           name:'CyInstrumentType',
-          component: CyInstrumentType
+          component: CyInstrumentType,
+          meta: { requireAuth: true },
         },
         {
           path: '/resource/institution',
           name: 'CyInstitutionManage',
-          component: CyInstitutionManage
+          component: CyInstitutionManage,
+          meta: { requireAuth: true },
         }
       ]
     }

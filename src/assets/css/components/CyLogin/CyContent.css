@@ -145,8 +145,13 @@ p {
     flex-direction: row;
 }
 
-.cy-content-image {
+.cy-content-image-group {
+    
     margin-right:40px !important;
+}
+
+.cy-content-image {
+    width: 100%;
 }
 
 .box-card {
