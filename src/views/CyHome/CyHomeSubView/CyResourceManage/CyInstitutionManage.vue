@@ -98,7 +98,6 @@
                          type="success"
                          @click="openDialog('watch',scope.$index, scope.row)">查看</el-button>
               <el-button size="mini"
-                         type="success"
                          @click="openDialog('edit',scope.$index, scope.row)">编辑</el-button>
               <el-button size="mini"
                          type="danger"
@@ -111,8 +110,8 @@
         <el-pagination @size-change="handleSizeChange"
                        @current-change="handleCurrentChange"
                        :current-page.sync="currentPage1"
-                       background
                        :page-size="100"
+                       background
                        layout="total, prev, pager, next"
                        :total="1000">
         </el-pagination>

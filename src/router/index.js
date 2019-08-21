@@ -13,35 +13,41 @@ import CyLogin from '../views/CyLogin.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path:'/login',
+  routes: [{
+      path: '/',
       name: 'CyLogin',
       component: CyLogin,
     },
     {
-      path:'/home',
+      path: '/home',
       name: 'CyHome',
       component: CyHome,
-      meta: { requireAuth: true },
-      children: [
-        {
-          path:'/home/index',
-          name:'CyHomeIndex',
+      meta: {
+        requireAuth: true
+      },
+      children: [{
+          path: '/home/index',
+          name: 'CyHomeIndex',
           component: CyHomeIndex,
-          meta: { requireAuth: true },
+          meta: {
+            requireAuth: true
+          },
         },
         {
           path: '/resource/type',
-          name:'CyInstrumentType',
+          name: 'CyInstrumentType',
           component: CyInstrumentType,
-          meta: { requireAuth: true },
+          meta: {
+            requireAuth: true
+          },
         },
         {
           path: '/resource/institution',
           name: 'CyInstitutionManage',
           component: CyInstitutionManage,
-          meta: { requireAuth: true },
+          meta: {
+            requireAuth: true
+          },
         }
       ]
     }
